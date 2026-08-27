@@ -25,39 +25,43 @@ INDO_MONTHS = ["", "Januari","Februari","Maret","April","Mei","Juni",
 THEMES = [
   { # 0 Sand — warm cream, terracotta accent, subtle diagonal weave
     "vars": {
-      "--bg-base":"#f1e7d3","--ink":"#1f3a30","--accent":"#a15c3e","--sub":"#6b7a63",
-      "--panel":"#fdfaf1","--line":"#c39a55","--panel-soft":"rgba(255,255,255,.4)",
-      "--blob1":"#cdbf9a","--blob2":"#a8b596","--blob-bottom":"#1f3a30","--on-blob":"#f7efe0",
+      "--bg-base":"#f3e6cf","--ink":"#33220f","--accent":"#9c5a2c","--sub":"#7a5c42",
+      "--panel":"#fffaf0","--line":"#c9a15a","--panel-soft":"rgba(255,252,242,.5)",
+      "--quote":"#241a12",
+      "--blob1":"#e0c79c","--blob2":"#efdcbc","--blob-bottom":"#3a2a1c","--on-blob":"#f9f1e2",
+      "--on-blob-accent":"#e2b878",
     },
     "logo":"logo_forest.png",
     "bg_layer": """
-      <svg class="bglayer" width="1200" height="1500" style="position:absolute;inset:0;opacity:.5">
+      <svg class="bglayer" width="1200" height="1500" style="position:absolute;inset:0;opacity:.55">
         <defs>
           <pattern id="weave" width="46" height="46" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="0" y2="46" stroke="#c39a55" stroke-opacity=".18" stroke-width="1"/>
+            <line x1="0" y1="0" x2="0" y2="46" stroke="#b8863f" stroke-opacity=".18" stroke-width="1"/>
           </pattern>
         </defs>
         <rect width="1200" height="1500" fill="url(#weave)"/>
       </svg>
     """,
   },
-  { # 1 Sage — soft botanical green watercolor wash
+  { # 1 Honey — warm wheat / amber wash
     "vars": {
-      "--bg-base":"#eef1e7","--ink":"#203828","--accent":"#7a6a3f","--sub":"#5c6b52",
-      "--panel":"#fbfaf4","--line":"#8e9b74","--panel-soft":"rgba(255,255,255,.45)",
-      "--blob1":"#b9c9a4","--blob2":"#dfe6cf","--blob-bottom":"#203828","--on-blob":"#f2f4ea",
+      "--bg-base":"#f7ecd6","--ink":"#3a2a12","--accent":"#96632a","--sub":"#7d6544",
+      "--panel":"#fffaf1","--line":"#c9a15a","--panel-soft":"rgba(255,251,243,.55)",
+      "--quote":"#2a1d0e",
+      "--blob1":"#e6cd9c","--blob2":"#f3e4c6","--blob-bottom":"#3a2a12","--on-blob":"#f9f2e2",
+      "--on-blob-accent":"#e3bb7a",
     },
     "logo":"logo_forest.png",
     "bg_layer": """
       <svg width="1200" height="1500" style="position:absolute;inset:0">
         <defs>
           <radialGradient id="wash1" cx="15%" cy="10%" r="55%">
-            <stop offset="0%" stop-color="#c7d6b3" stop-opacity=".65"/>
-            <stop offset="100%" stop-color="#c7d6b3" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#e8cd9a" stop-opacity=".7"/>
+            <stop offset="100%" stop-color="#e8cd9a" stop-opacity="0"/>
           </radialGradient>
           <radialGradient id="wash2" cx="90%" cy="85%" r="50%">
-            <stop offset="0%" stop-color="#a9bd8e" stop-opacity=".5"/>
-            <stop offset="100%" stop-color="#a9bd8e" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#d9ab63" stop-opacity=".45"/>
+            <stop offset="100%" stop-color="#d9ab63" stop-opacity="0"/>
           </radialGradient>
         </defs>
         <rect width="1200" height="1500" fill="url(#wash1)"/>
@@ -67,20 +71,22 @@ THEMES = [
   },
   { # 2 Blush — dusty rose / terracotta gradient
     "vars": {
-      "--bg-base":"#f3e9e2","--ink":"#3a2620","--accent":"#b0562f","--sub":"#8a6656",
-      "--panel":"#fdf8f4","--line":"#c98a5e","--panel-soft":"rgba(255,255,255,.45)",
-      "--blob1":"#e3b9a4","--blob2":"#efd9c8","--blob-bottom":"#3a2620","--on-blob":"#f6e9df",
+      "--bg-base":"#f6e8de","--ink":"#3a2620","--accent":"#a94f26","--sub":"#8a6656",
+      "--panel":"#fffaf5","--line":"#c98a5e","--panel-soft":"rgba(255,250,246,.55)",
+      "--quote":"#2e1c14",
+      "--blob1":"#e8bda4","--blob2":"#f3dccb","--blob-bottom":"#3a2620","--on-blob":"#f9ece1",
+      "--on-blob-accent":"#eab48d",
     },
     "logo":"logo_forest.png",
     "bg_layer": """
       <svg width="1200" height="1500" style="position:absolute;inset:0">
         <defs>
           <radialGradient id="wb1" cx="85%" cy="8%" r="55%">
-            <stop offset="0%" stop-color="#e3b9a4" stop-opacity=".55"/>
-            <stop offset="100%" stop-color="#e3b9a4" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#e8bda4" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#e8bda4" stop-opacity="0"/>
           </radialGradient>
           <radialGradient id="wb2" cx="8%" cy="95%" r="55%">
-            <stop offset="0%" stop-color="#d68f66" stop-opacity=".4"/>
+            <stop offset="0%" stop-color="#d68f66" stop-opacity=".42"/>
             <stop offset="100%" stop-color="#d68f66" stop-opacity="0"/>
           </radialGradient>
         </defs>
@@ -89,29 +95,31 @@ THEMES = [
       </svg>
     """,
   },
-  { # 3 Midnight — deep navy/charcoal with soft gold light rays
+  { # 3 Ember — warm deep espresso with gold light rays
     "vars": {
-      "--bg-base":"#131c2b","--ink":"#f3ecdd","--accent":"#d8b878","--sub":"#c9c2b0",
-      "--panel":"rgba(255,255,255,.08)","--line":"#d8b878","--panel-soft":"rgba(255,255,255,.06)",
-      "--blob1":"#3a4a63","--blob2":"#243247","--blob-bottom":"#0c1119","--on-blob":"#f3ecdd",
+      "--bg-base":"#241611","--ink":"#f8ead4","--accent":"#e0a95f","--sub":"#d6bfa2",
+      "--panel":"rgba(255,240,215,.12)","--line":"#e0a95f","--panel-soft":"rgba(255,240,215,.08)",
+      "--quote":"#fdf3e2",
+      "--blob1":"#4d3122","--blob2":"#33201a","--blob-bottom":"#17100c","--on-blob":"#f8ead4",
+      "--on-blob-accent":"#e0a95f",
     },
     "logo":"logo_gold.png",
     "bg_layer": """
       <svg width="1200" height="1500" style="position:absolute;inset:0">
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1c2a40"/>
-            <stop offset="55%" stop-color="#131c2b"/>
-            <stop offset="100%" stop-color="#0b0f17"/>
+            <stop offset="0%" stop-color="#3a2318"/>
+            <stop offset="55%" stop-color="#241611"/>
+            <stop offset="100%" stop-color="#160d09"/>
           </linearGradient>
           <radialGradient id="glow" cx="50%" cy="18%" r="45%">
-            <stop offset="0%" stop-color="#d8b878" stop-opacity=".35"/>
-            <stop offset="100%" stop-color="#d8b878" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#e0a95f" stop-opacity=".4"/>
+            <stop offset="100%" stop-color="#e0a95f" stop-opacity="0"/>
           </radialGradient>
         </defs>
         <rect width="1200" height="1500" fill="url(#sky)"/>
         <rect width="1200" height="1500" fill="url(#glow)"/>
-        <g stroke="#d8b878" stroke-opacity=".12">
+        <g stroke="#e0a95f" stroke-opacity=".14">
           <line x1="600" y1="0" x2="120" y2="900"/>
           <line x1="600" y1="0" x2="360" y2="1000"/>
           <line x1="600" y1="0" x2="600" y2="1050"/>
@@ -133,7 +141,7 @@ LAYOUTS = [
   { # 0 Arch
     "class": "layout-arch",
     "decor": f'<div class="arch-shape"></div><div class="arch-outline"></div>'
-             f'<div style="position:absolute;left:50%;top:56px;transform:translateX(-50%);color:var(--line)">{CROSS_SVG}</div>'
+             f'<div style="position:absolute;left:50%;top:268px;transform:translateX(-50%);color:var(--line)">{CROSS_SVG}</div>'
              f'<div class="dots">&middot; &nbsp; &middot; &nbsp; &middot;</div>',
   },
   { # 1 Blob / organic

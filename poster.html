@@ -13,11 +13,12 @@
 @font-face { font-family:'Montserrat'; src: url('assets/fonts/montserrat-latin-700-normal.woff2') format('woff2'); font-weight:700; }
 
 :root{
-  --ink:#16332c;
-  --accent:#a15c3e;
-  --sub:#6b7a63;
-  --panel:#fdfaf3;
+  --ink:#2b1d12;
+  --accent:#9c5a2c;
+  --sub:#7a5c42;
+  --panel:#fdf6ea;
   --line:#c9a15a;
+  --quote:#241a12;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html,body{width:1200px; height:1500px;}
@@ -26,79 +27,81 @@ body{
   color:var(--ink);
   position:relative;
   overflow:hidden;
-  background: var(--bg-base, #efe6d3);
+  background: var(--bg-base, #f2e7d3);
 }
 .page{ position:absolute; inset:0; }
 
 /* ---------- shared text blocks ---------- */
-.brand{ position:absolute; display:flex; align-items:flex-start; gap:22px; }
-.brand img{ width:96px; height:96px; }
+.brand{ position:absolute; display:flex; align-items:flex-start; gap:24px; }
+.brand img{ width:116px; height:116px; }
 .brand .names{ font-family:'Montserrat'; }
-.brand .jemaat{ font-size:14px; font-weight:700; letter-spacing:3px; color:var(--accent); margin-bottom:6px;}
-.brand .line1{ font-size:17px; font-weight:700; letter-spacing:1px; color:var(--ink); }
-.brand .line2{ font-size:17px; font-weight:700; letter-spacing:1px; color:var(--ink); margin-top:2px;}
+.brand .jemaat{ font-size:19px; font-weight:700; letter-spacing:4px; color:var(--accent); margin-bottom:8px;}
+.brand .line1{ font-size:24px; font-weight:700; letter-spacing:1px; color:var(--ink); }
+.brand .line2{ font-size:24px; font-weight:700; letter-spacing:1px; color:var(--ink); margin-top:4px;}
 
-.eyebrow{ font-family:'Montserrat'; font-size:15px; font-weight:700; letter-spacing:5px; color:var(--accent); display:flex; align-items:center; gap:14px;}
-.eyebrow .bar{ width:34px; height:2px; background:var(--line); display:inline-block;}
+.eyebrow{ font-family:'Montserrat'; font-size:20px; font-weight:700; letter-spacing:4.5px; color:var(--accent); display:flex; align-items:center; gap:16px;}
+.eyebrow .bar{ width:44px; height:3px; background:var(--line); display:inline-block;}
 
-.title{ font-family:'Playfair'; font-style:italic; font-weight:800; font-size:88px; line-height:1.05; color:var(--ink); }
+.title{ font-family:'Playfair'; font-style:italic; font-weight:800; font-size:104px; line-height:1.05; color:var(--ink); }
 
-.versebox{ background:var(--panel); border-left:6px solid var(--ink); padding:30px 34px; }
-.versebox .label{ font-family:'Montserrat'; font-size:13px; font-weight:700; letter-spacing:3px; color:var(--ink); margin-bottom:10px;}
-.versebox .quote{ font-size:26px; font-style:italic; line-height:1.42; color:#2a2a2a; }
-.versebox .ref{ font-family:'Montserrat'; font-size:14px; font-weight:700; letter-spacing:1.5px; color:var(--accent); margin-top:12px;}
+.versebox{ background:var(--panel); border-left:8px solid var(--accent); padding:34px 40px; }
+.versebox .label{ font-family:'Montserrat'; font-size:17px; font-weight:700; letter-spacing:3px; color:var(--accent); margin-bottom:14px;}
+.versebox .quote{ font-size:36px; font-style:italic; font-weight:600; line-height:1.4; color:var(--quote);}
+.versebox .ref{ font-family:'Montserrat'; font-size:19px; font-weight:700; letter-spacing:1.5px; color:var(--accent); margin-top:16px;}
 
-.infolabel{ font-family:'Montserrat'; font-size:12.5px; font-weight:700; letter-spacing:2.5px; color:var(--accent);}
-.infoval{ font-family:'Cormorant'; font-size:32px; font-weight:600; color:var(--ink); margin-top:4px;}
-.infosmall{ font-family:'Montserrat'; font-size:12.5px; font-weight:700; letter-spacing:2px; color:var(--ink); margin-top:6px;}
-.cp{ font-family:'Montserrat'; font-size:13px; font-weight:600; color:var(--ink); opacity:.85;}
+.infolabel{ font-family:'Montserrat'; font-size:17px; font-weight:700; letter-spacing:2.2px; color:var(--accent);}
+.infoval{ font-family:'Cormorant'; font-size:44px; font-weight:700; color:var(--ink); margin-top:6px;}
+.infosmall{ font-family:'Montserrat'; font-size:18px; font-weight:700; letter-spacing:2px; color:var(--ink); margin-top:10px;}
+.cp{ font-family:'Montserrat'; font-size:20px; font-weight:600; color:var(--ink);}
 .col{ display:flex; flex-direction:column; }
 .subtitle{ display:none; }
 
 /* ============================================================
    LAYOUT A — Arch
    ============================================================ */
-.layout-arch .brand{ top:90px; left:90px; }
+.layout-arch .brand{ top:80px; left:80px; }
 .layout-arch .arch-shape{
   position:absolute; left:50%; top:230px; transform:translateX(-50%);
-  width:1020px; height:900px;
+  width:1020px; height:1010px;
   background:var(--panel-soft, rgba(255,255,255,.35));
   border-radius:510px 510px 0 0;
 }
 .layout-arch .arch-outline{
   position:absolute; left:50%; top:270px; transform:translateX(-50%);
-  width:940px; height:820px;
+  width:940px; height:930px;
   border:1.5px solid rgba(0,0,0,.12);
   border-radius:470px 470px 0 0;
   border-bottom:none;
 }
-.layout-arch .cross{ position:absolute; left:50%; top:60px; transform:translateX(-50%); width:56px; height:130px;}
-.layout-arch .eyebrow{ position:absolute; left:90px; top:560px; }
-.layout-arch .title{ position:absolute; left:90px; top:610px; width:900px;}
-.layout-arch .versebox{ position:absolute; left:90px; top:790px; width:850px;}
-.layout-arch .bottom{ position:absolute; left:90px; right:90px; bottom:255px; display:flex; gap:70px;}
-.layout-arch .place{ position:absolute; left:90px; right:90px; bottom:110px; padding-top:22px; border-top:1px solid rgba(0,0,0,.15);}
-.layout-arch .cp{ position:absolute; left:90px; bottom:56px; }
-.layout-arch .dots{ position:absolute; left:0; right:0; bottom:14px; text-align:center; color:var(--line); letter-spacing:14px; font-size:14px;}
+.layout-arch .cross{ position:relative; width:56px; height:130px;}
+.layout-arch .eyebrow{ position:absolute; left:80px; top:520px; }
+.layout-arch .title{ position:absolute; left:80px; top:566px; width:960px;}
+.layout-arch .versebox{ position:absolute; left:80px; top:760px; width:1040px;}
+.layout-arch .bottom{ position:absolute; left:80px; right:80px; bottom:280px; display:flex; gap:90px;}
+.layout-arch .place{ position:absolute; left:80px; right:80px; bottom:120px; padding-top:26px; border-top:1px solid rgba(0,0,0,.18);}
+.layout-arch .cp{ position:absolute; left:80px; bottom:52px; }
+.layout-arch .dots{ position:absolute; left:0; right:0; bottom:16px; text-align:center; color:var(--line); letter-spacing:14px; font-size:16px;}
 
 /* ============================================================
    LAYOUT B — Blob / organic
    ============================================================ */
-.layout-blob .brand{ top:80px; left:86px; }
+.layout-blob .brand{ top:76px; left:80px; }
 .layout-blob .blob1{ position:absolute; right:-140px; top:-60px; width:560px; height:560px; border-radius:42% 58% 63% 37% / 41% 44% 56% 59%; background:var(--blob1); opacity:.9;}
 .layout-blob .blob2{ position:absolute; left:-160px; top:520px; width:420px; height:420px; border-radius:60% 40% 35% 65% / 55% 45% 55% 45%; background:var(--blob2); opacity:.55;}
-.layout-blob .eyebrow{ position:absolute; left:88px; top:590px; }
-.layout-blob .title{ position:absolute; left:86px; top:636px; width:900px; font-size:80px;}
-.layout-blob .versebox{ position:absolute; left:88px; top:800px; width:850px;}
+.layout-blob .eyebrow{ position:absolute; left:80px; top:500px; }
+.layout-blob .title{ position:absolute; left:80px; top:546px; width:960px; font-size:96px;}
+.layout-blob .versebox{ position:absolute; left:80px; top:790px; width:1040px;}
 .layout-blob .bigblob{
-  position:absolute; left:-2px; right:-2px; bottom:-30px; height:640px;
+  position:absolute; left:-2px; right:-2px; bottom:-30px; height:520px;
   background:var(--blob-bottom); border-radius:80px 80px 0 0;
 }
-.layout-blob .bottom{ position:absolute; left:90px; right:110px; bottom:255px; display:flex; gap:70px;}
-.layout-blob .bottom .infolabel, .layout-blob .bottom .infoval, .layout-blob .bottom .infosmall{ color:var(--on-blob,#fff);}
-.layout-blob .place{ position:absolute; left:90px; right:110px; bottom:110px; padding-top:22px; border-top:1px solid rgba(255,255,255,.35);}
-.layout-blob .place .infolabel, .layout-blob .place .infoval, .layout-blob .place .infosmall{ color:var(--on-blob,#fff);}
-.layout-blob .cp{ position:absolute; left:90px; bottom:56px; color:var(--on-blob,#fff); opacity:.9;}
+.layout-blob .bottom{ position:absolute; left:80px; right:80px; bottom:270px; display:flex; gap:90px;}
+.layout-blob .bottom .infolabel{ color:var(--on-blob-accent, var(--line));}
+.layout-blob .bottom .infoval, .layout-blob .bottom .infosmall{ color:var(--on-blob,#fff);}
+.layout-blob .place{ position:absolute; left:80px; right:80px; bottom:118px; padding-top:26px; border-top:1px solid rgba(255,255,255,.35);}
+.layout-blob .place .infolabel{ color:var(--on-blob-accent, var(--line));}
+.layout-blob .place .infoval, .layout-blob .place .infosmall{ color:var(--on-blob,#fff);}
+.layout-blob .cp{ position:absolute; left:80px; bottom:52px; color:var(--on-blob,#fff);}
 
 /* ============================================================
    LAYOUT C — Elegant frame
@@ -109,19 +112,19 @@ body{
 .layout-frame .c-tr{ top:20px; right:20px; border-left:none; border-bottom:none;}
 .layout-frame .c-bl{ bottom:20px; left:20px; border-right:none; border-top:none;}
 .layout-frame .c-br{ bottom:20px; right:20px; border-left:none; border-top:none;}
-.layout-frame .brand{ top:96px; left:0; right:0; width:100%; flex-direction:column; align-items:center; text-align:center; gap:10px;}
-.layout-frame .brand img{ width:120px; height:120px; margin-bottom:6px;}
-.layout-frame .eyebrow{ position:absolute; left:0; right:0; top:470px; justify-content:center; text-align:center;}
-.layout-frame .title{ position:absolute; left:0; right:0; top:520px; text-align:center; font-style:normal; font-family:'Playfair'; font-weight:700; font-size:74px;}
-.layout-frame .subtitle{ display:block; position:absolute; left:0; right:0; top:640px; text-align:center; font-family:'Montserrat'; font-size:14px; font-weight:600; letter-spacing:4px; color:var(--sub);}
-.layout-frame .bottom{ position:absolute; left:0; right:0; top:740px; display:flex; justify-content:center; gap:90px; text-align:center;}
+.layout-frame .brand{ top:84px; left:0; right:0; width:100%; flex-direction:column; align-items:center; text-align:center; gap:12px;}
+.layout-frame .brand img{ width:136px; height:136px; margin-bottom:6px;}
+.layout-frame .eyebrow{ position:absolute; left:0; right:0; top:440px; justify-content:center; text-align:center;}
+.layout-frame .title{ position:absolute; left:0; right:0; top:486px; text-align:center; font-style:normal; font-family:'Playfair'; font-weight:700; font-size:94px;}
+.layout-frame .subtitle{ display:block; position:absolute; left:0; right:0; top:626px; text-align:center; font-family:'Montserrat'; font-size:19px; font-weight:600; letter-spacing:3.5px; color:var(--sub);}
+.layout-frame .bottom{ position:absolute; left:0; right:0; top:706px; display:flex; justify-content:center; gap:110px; text-align:center;}
 .layout-frame .bottom .col{ display:flex; flex-direction:column; align-items:center; }
-.layout-frame .place{ position:absolute; left:0; right:0; top:860px; text-align:center; padding-top:22px;}
-.layout-frame .place-inner{ display:inline-block; border-top:1px solid rgba(0,0,0,.15); padding-top:20px;}
-.layout-frame .versebox{ position:absolute; left:150px; right:150px; top:1010px; background:none; border:none; text-align:center; padding:0;}
-.layout-frame .versebox .quote{ font-size:24px;}
+.layout-frame .place{ position:absolute; left:0; right:0; top:868px; text-align:center; padding-top:24px;}
+.layout-frame .place-inner{ display:inline-block; border-top:1px solid rgba(0,0,0,.18); padding-top:22px;}
+.layout-frame .versebox{ position:absolute; left:110px; right:110px; top:1080px; border-left:none; border-top:3px solid var(--accent); text-align:center; padding:30px 40px;}
+.layout-frame .versebox .quote{ font-size:33px;}
 .layout-frame .versebox .ref{ text-align:center; }
-.layout-frame .cp{ position:absolute; left:0; right:0; bottom:60px; text-align:center;}
+.layout-frame .cp{ position:absolute; left:0; right:0; bottom:58px; text-align:center;}
 
 </style>
 </head>
